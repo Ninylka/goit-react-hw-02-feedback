@@ -17,21 +17,6 @@ const { Component } = require("react")
         this.setState((prevState) => ({ [type]: prevState[type] + 1 }));
       };
    
-    handlerGoodClick = () => {
-        this.setState((prevState) => ({ good: prevState.good + 1}))
-      
-    }
-    handlerNeutralClick = () => {
-        this.setState((prevState) => ({ neutral: prevState.neutral+ 1}))
-      
-    }
-
-    handlerBadClick = () => {
-        this.setState((prevState) => ({ bad: prevState.bad + 1}))
-      
-    }
-
-
     countTotalFeedback = () => {
         const { good, neutral, bad } = this.state;
         return good + neutral + bad;
